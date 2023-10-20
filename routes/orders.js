@@ -140,8 +140,8 @@ router.delete("/:id", function (req, res) {
 });
 
 function validateOrder(order) {
-    let regexLetters = /(^[A-Za-z]{2,30})/;
-    let regexZipCode = /^[0-9]{6}$/;
+    let regexLetters = /(^[A-Za-z0-9]{2,30})/;
+    let regexZipCode = /^[0-9]{4,6}$/;
     let regexAddressSuite = /^[.0-9a-zA-Z\s,-]+$/;
 
     return (

@@ -77,7 +77,7 @@ router.put("/:id", function (req, res, next) {
 function validateUser(user) {
   let regexLetters = /(^[A-Za-z]{2,30})([ ]{0,1})([A-Za-z]{2,30})/;
   let regexPhone = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g;
-  let regexZipCode = /^[0-9]{6}$/;
+  let regexZipCode = /^[0-9]{4,6}$/;
   let regexAddressSuite = /^[.0-9a-zA-Z\s,-]+$/;
 
   return (
