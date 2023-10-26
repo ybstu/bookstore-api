@@ -56,6 +56,7 @@ function validateUser(user) {
   const regexLetters = /(^[A-Za-z]{2,30})([ ]{0,1})([A-Za-z]{2,30})/;
   const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
   const regexPassword = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+  // const regexPassword = /^[a-z0-9_-]{3,16}$/;
   const regexUsername = /^[a-z0-9_-]{3,16}$/igm;
 
   return user.name.match(regexLetters) &&
